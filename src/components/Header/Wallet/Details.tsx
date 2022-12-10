@@ -7,6 +7,7 @@ import Conversion from '@shared/Price/Conversion'
 import { useWeb3 } from '@context/Web3'
 import { getOceanConfig } from '@utils/ocean'
 import styles from './Details.module.css'
+import appConfig from 'app.config'
 
 export default function Details(): ReactElement {
   const {
@@ -36,8 +37,8 @@ export default function Details(): ReactElement {
 
     oceanConfig &&
       setOceanTokenMetadata({
-        address: oceanConfig.oceanTokenAddress,
-        symbol: oceanConfig.oceanTokenSymbol
+        address: appConfig.fractalflowsBaseToken[networkId].address,
+        symbol: appConfig.fractalflowsBaseToken[networkId].symbol
       })
   }, [networkData, networkId])
 
