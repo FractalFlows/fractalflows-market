@@ -1,14 +1,10 @@
 {
-  "siteTitle": "Ocean Market",
-  "siteTagline": "A marketplace to find, publish and trade datasets in the Ocean Network.",
-  "siteUrl": "https://market.oceanprotocol.com",
+  "siteTitle": "Fractal Flows Market",
+  "siteTagline": "A marketplace to find, publish and trade scientific datasets over the blockchain.",
+  "siteUrl": "https://market.fractalflows.com",
   "siteImage": "/share.png",
   "copyright": "All Rights Reserved. Powered by ",
   "menu": [
-    {
-      "name": "Publish",
-      "link": "/publish/1"
-    },
     {
       "name": "Profile",
       "link": "/profile"

@@ -44,11 +44,11 @@ export default function AddToken({
       size="small"
       onClick={handleAddToken}
     >
-      <span className={styles.logoWrap}>
+      {/* <span className={styles.logoWrap}>
         <div className={styles.logo}>
           <OceanLogo />
         </div>
-      </span>
+      </span> */}
 
       <span className={styles.text}>{text || `Add ${symbol}`}</span>
     </Button>
