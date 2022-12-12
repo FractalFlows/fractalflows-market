@@ -36,11 +36,10 @@ export default function Nft({
 
   return (
     <div className={styles.nftImage}>
-      {nftImage ? (
-        <img src={nftImage} alt={asset?.nft?.name} />
-      ) : (
-        <Logo noWordmark />
-      )}
+      {
+        nftImage ? <img src={nftImage} alt={asset?.nft?.name} /> : null
+        // <Logo noWordmark />
+      }
 
       {(nftMetadata || asset?.nftAddress) && (
         <Tooltip

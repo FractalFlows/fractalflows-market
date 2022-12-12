@@ -11,10 +11,12 @@ module.exports = {
 
   // List of chainIds which metadata cache queries will return by default.
   // This preselects the Chains user preferences.
-  chainIds: [1, 137, 56, 246, 1285],
+  // chainIds: [1, 137, 56, 246, 1285],
+  chainIds: [5],
 
   // List of all supported chainIds. Used to populate the Chains user preferences list.
-  chainIdsSupported: [1, 137, 56, 246, 1285, 5, 80001],
+  // chainIdsSupported: [1, 137, 56, 246, 1285, 5, 80001],
+  chainIdsSupported: [5],
 
   infuraProjectId: process.env.NEXT_PUBLIC_INFURA_PROJECT_ID || 'xxx',
 
@@ -81,5 +83,15 @@ module.exports = {
   // is used to create and show a privacy preference center / cookie banner
   // To learn more about how to configure and use this, please refer to the readme
   privacyPreferenceCenter:
-    process.env.NEXT_PUBLIC_PRIVACY_PREFERENCE_CENTER || 'false'
+    process.env.NEXT_PUBLIC_PRIVACY_PREFERENCE_CENTER || 'false',
+
+  /// Fractal Flows
+  fractalflowsBaseToken: {
+    5: {
+      address: '0x819b194B69bC7a56c0571C2C5520c594eFab2793',
+      symbol: 'FFDST',
+      name: 'Fractal Flows Decentralized Science Token',
+      decimals: 18
+    }
+  }
 }

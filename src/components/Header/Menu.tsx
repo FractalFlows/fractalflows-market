@@ -37,7 +37,7 @@ export default function Menu(): ReactElement {
     <nav className={styles.menu}>
       <Link href="/">
         <a className={styles.logo}>
-          <Logo noWordmark />
+          {/* <Logo noWordmark /> */}
           <h1 className={styles.title}>{siteContent?.siteTitle}</h1>
         </a>
       </Link>

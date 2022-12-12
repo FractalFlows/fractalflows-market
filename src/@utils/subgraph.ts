@@ -162,13 +162,18 @@ export async function getUserTokenOrders(
 export async function getOpcsApprovedTokens(
   chainId: number
 ): Promise<TokenInfo[]> {
-  const context = getQueryContext(chainId)
+  return Promise.resolve([appConfig.fractalflowsBaseToken[chainId]])
 
-  try {
-    const response = await fetchData(OpcsApprovedTokensQuery, null, context)
-    return response?.data?.opcs[0].approvedTokens
-  } catch (error) {
-    LoggerInstance.error('Error getOpcsApprovedTokens: ', error.message)
-    throw Error(error.message)
-  }
+  // const context = getQueryContext(chainId)
+
+  // try {
+  //   const response = await fetchData(OpcsApprovedTokensQuery, null, context)
+  //   return [
+  //     ,
+  //     ...response?.data?.opcs[0].approvedTokens
+  //   ]
+  // } catch (error) {
+  //   LoggerInstance.error('Error getOpcsApprovedTokens: ', error.message)
+  //   throw Error(error.message)
+  // }
 }
