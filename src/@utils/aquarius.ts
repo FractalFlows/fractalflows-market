@@ -51,6 +51,14 @@ export function generateBaseQuery(
     query: {
       bool: {
         ...baseQueryParams.nestedQuery,
+        must: [
+          {
+            match: {
+              'metadata.author': 'Fractal Flows'
+            }
+          },
+          ...(baseQueryParams?.nestedQuery?.must || [])
+        ],
         filter: [
           ...(baseQueryParams.filters || []),
           baseQueryParams.chainIds
